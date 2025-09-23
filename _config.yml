@@ -24,13 +24,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Xinwei Niu"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "MSc Artificial Intelligence Student at the University of Edinburgh"
+  location         : "Edinburgh, Scotland."
+  employer         : "University of Edinburgh"
   uri              : # URL
-  email            : "nxw2002@outlook.com" 
+  email            : "nxw2002AToutlookDOTcom" 
 
   # Academic websites
   academia         : # URL
