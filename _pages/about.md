@@ -23,6 +23,21 @@ My CV is [here](https://xinwei-niu.vercel.app/cv/).
 
 During my spare time, I like to travel around different places, mainly in Europe. 
 
-<img src="https://xinwei-niu.vercel.app/files/travel1.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
-<img src="https://xinwei-niu.vercel.app/files/travel2.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
-<img src="https://xinwei-niu.vercel.app/files/travel3.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
+<div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:20px;">
+
+  <!-- Top row: 2 images side by side -->
+  <div style="display:flex; flex:1 1 100%; gap:16px; flex-wrap:wrap; justify-content:center;">
+    <img src="https://xinwei-niu.vercel.app/files/travel1.jpg" 
+         alt="Travel Photo 1" 
+         style="flex:1 1 300px; max-width:400px; border-radius:8px; object-fit:cover;">
+    <img src="https://xinwei-niu.vercel.app/files/travel2.jpg" 
+         alt="Travel Photo 2" 
+         style="flex:1 1 300px; max-width:400px; border-radius:8px; object-fit:cover;">
+    <img src="https://xinwei-niu.vercel.app/files/travel3.jpg" 
+         alt="Travel Photo 3" 
+         style="flex:1 1 300px; max-width:400px; border-radius:8px; object-fit:cover;">
+
+  </div>
+
+
+</div>
