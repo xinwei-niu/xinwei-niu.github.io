@@ -14,7 +14,7 @@ I am an MSc graduate in **Artificial Intelligence** from [the University of Edin
 
 My research interests span a broad range of **efficient generative modelling techniques**, including applications in both Natural Language Processing and image and video synthesis. I am particularly interested in **sparse attention methods**, including **hardware-aware sparse attention, KV-cache eviction and compression methods**. Mean while, I am interested in efficient generative architectures ranging from autoregressive and semi-autoregressive models to diffusion-based language models. I also follow advances in emerging state-space model and linear RNN architectures, especially in the context of building scalable, efficient and low-cost generative systems. I personally conducted a literature review on [efficient diffusion models for image synthesis](https://xinwei-niu.vercel.app/files/IRR_Xinwei.pdf).
 
-I am currently applying for PhD programs to continue my research in efficient, multimodal generative modelling and next-generation model architectures. If you would like to connect, collaborate, or simply chat about research, please feel free to reach out at nxw2002[at]outlook[dot]com! I’m always happy to connect with new people and exchange ideas.
+I am currently applying for PhD programs to continue my research in efficient, multimodal generative modelling and next-generation model architectures. If you would like to connect, collaborate, or simply chat about research, please feel free to reach out at **nxw2002 [at] outlook [dot] com**! I’m always happy to connect with new people and exchange ideas.
 
 My CV is [here](https://xinwei-niu.vercel.app/cv/). 
 
