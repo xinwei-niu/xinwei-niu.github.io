@@ -23,4 +23,6 @@ My CV is [here](https://xinwei-niu.vercel.app/cv/).
 
 During my spare time, I like to travel around different places, mainly in Europe. 
 
-![My Photos](https://xinwei-niu.vercel.app/files/banner.jpg)
+<img src="https://xinwei-niu.vercel.app/files/travel1.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
+<img src="https://xinwei-niu.vercel.app/files/travel2.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
+<img src="https://xinwei-niu.vercel.app/files/travel3.jpg" alt="My Photos" style="width:80%; max-width:800px; display:block; margin:auto; border-radius:8px;">
