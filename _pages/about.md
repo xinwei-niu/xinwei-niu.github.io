@@ -6,8 +6,7 @@ redirect_from:
   - /about/
   - /about.html
   
-header:
-  overlay_image: /files/banner.jpg   # path to your banner photo                     # optional: darken/lighten overlay (0–1)
+
 ---
 
 
@@ -18,3 +17,10 @@ My research interests span a broad range of **efficient generative modelling tec
 I am currently applying for PhD programs to continue my research in efficient, multimodal generative modelling and next-generation model architectures. If you would like to connect, collaborate, or simply chat about research, please feel free to reach out at nxw2002[at]outlook[dot]com! I’m always happy to connect with new people and exchange ideas.
 
 My CV is [here](https://xinwei-niu.vercel.app/cv/). 
+
+
+---
+
+During my spare time, I like to travel around different places, mainly in Europe. 
+
+![My Photos](https://xinwei-niu.vercel.app/files/banner.jpg)
