@@ -573,7 +573,7 @@ border-radius: .1em;
 
 
 .sidebar.sticky {
-    position: relative;
+    position: static;
     top: 100px; /* distance from top (adjust for navbar if any) */
     left: 20px; /* distance from right edge */
     width: 260px; /* adjust to fit your layout */
