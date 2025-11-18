@@ -1,7 +1,24 @@
+@media (min-width: 1024px) { /* only on desktop */
+  .sidebar.sticky {
+    position: fixed;
+    top: 100px; /* distance from top (adjust for navbar if any) */
+    right: 20px; /* distance from right edge */
+    width: 260px; /* adjust to fit your layout */
+    max-height: calc(100vh - 120px); /* stays within viewport */
+    overflow-y: auto; /* scroll if content exceeds height */
+    z-index: 999;
+  }
+
+  /* Push main content to avoid overlapping sidebar */
+  .main-content {
+    margin-right: 300px; /* sidebar width + spacing */
+  }
+}
+
 {% include base_path %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar">
+  <div class="sidebar sticky">
   {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}
