@@ -45,6 +45,7 @@ During my spare time, I like to travel around different places, mainly in Europe
   </div>
 
 </div>
+---
 
 Farewell to my little hammy, Yashi (ヤシ, 🥥).
 
