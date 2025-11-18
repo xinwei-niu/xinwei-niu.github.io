@@ -26,25 +26,25 @@ During my spare time, I like to travel around different places, mainly in Europe
 <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:20px;">
 
   <!-- Each image container forces 2 per row -->
-  <div style="flex: 1 1 calc(70% - 16px); display:flex; justify-content:center;">
+  <div style="flex: 1 1 calc(40% - 16px); display:flex; justify-content:center;">
     <img src="https://xinwei-niu.vercel.app/files/travel1.jpg"
          alt="Travel Photo 1"
          style="width:100%; max-width:250px; border-radius:8px; object-fit:cover;">
   </div>
 
-  <div style="flex: 1 1 calc(50% - 16px); display:flex; justify-content:center;">
+  <div style="flex: 1 1 calc(40% - 16px); display:flex; justify-content:center;">
     <img src="https://xinwei-niu.vercel.app/files/travel4.jpg"
          alt="Travel Photo 4"
          style="width:100%; max-width:250px; border-radius:8px; object-fit:cover;">
   </div>
 
-  <div style="flex: 1 1 calc(50% - 16px); display:flex; justify-content:center;">
+  <div style="flex: 1 1 calc(40% - 16px); display:flex; justify-content:center;">
     <img src="https://xinwei-niu.vercel.app/files/travel2.jpg"
          alt="Travel Photo 2"
          style="width:100%; max-width:250px; border-radius:8px; object-fit:cover;">
   </div>
 
-  <div style="flex: 1 1 calc(50% - 16px); display:flex; justify-content:center;">
+  <div style="flex: 1 1 calc(40% - 16px); display:flex; justify-content:center;">
     <img src="https://xinwei-niu.vercel.app/files/travel3.jpg"
          alt="Travel Photo 3"
          style="width:100%; max-width:250px; border-radius:8px; object-fit:cover;">
