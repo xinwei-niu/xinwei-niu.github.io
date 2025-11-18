@@ -5,6 +5,10 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+  
+header:
+  overlay_image: /files/banner.jpg   # path to your banner photo
+  overlay_filter: 0.3                       # optional: darken/lighten overlay (0–1)
 ---
 
 
