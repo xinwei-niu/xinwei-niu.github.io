@@ -29,6 +29,14 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 ## Introduction to Linear Attention
 
+The scaled dot-product attention (SDPA) is defined as:
+
+\\[
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V
+\\]
+
+where $Q$ is the query matrix, $K$ is the key matrix, $V$ is the value matrix and $d_k$ is the dimensionality of the key vectors.
+
 
 
 
@@ -40,8 +48,10 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 ### References
 
-[1] S. Hochreiter and J. Schmidhuber, "Long Short-Term Memory," in Neural Computation, vol. 9, no. 8, pp. 1735-1780, 15 Nov. 1997, doi: 10.1162/neco.1997.9.8.1735.
+[1] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
 
-[2] Cho, Kyunghyun, et al. "Learning phrase representations using RNN encoder-decoder for statistical machine translation." arXiv preprint arXiv:1406.1078 (2014).
+[2] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., & Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078.
+
+[3] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.
 
 
