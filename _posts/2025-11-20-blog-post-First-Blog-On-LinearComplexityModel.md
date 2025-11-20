@@ -35,7 +35,7 @@ The scaled dot-product attention (SDPA) is defined as:
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V
 \\]
 
-where $Q$ is the query matrix, $K$ is the key matrix, $V$ is the value matrix and $d_k$ is the dimensionality of the key vectors.
+where $$Q$$ is the query matrix, $$K$$ is the key matrix, $$V$$ is the value matrix and $$d_k$$ is the dimensionality of the key vectors. However, 
 
 
 
