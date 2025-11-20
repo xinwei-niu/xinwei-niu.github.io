@@ -44,7 +44,7 @@ and its computational complexity is
 Under long-context reasoning tasks, the quadratic growth of the attention operation becomes a major bottleneck, since increasing the sequence length \\(N\\) leads to a rapid increase in both computation and memory cost. As \\(N\\) grows into the hundreds of thousands or millions, storing and manipulating the full \(N \times N\) attention matrix becomes infeasible, motivating the development of more efficient attention mechanisms that reduce or avoid the \\(\mathcal{O}(N^{2})\\) complexity.
 
 
-Hence, later works started to trying mitigate this computation bottleneck Locality-Sensitive Hashing Attention [4] \\(\mathcal{O(N\log N)}\\). 
+Hence, later works started to trying mitigate this computation bottleneck Locality-Sensitive Hashing Attention [4] \\(\mathcal{O}(N\log N)\\). 
 Linear Attention[5] 
 
 
