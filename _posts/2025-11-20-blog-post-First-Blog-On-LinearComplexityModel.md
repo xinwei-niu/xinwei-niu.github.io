@@ -30,15 +30,15 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 ## Introduction to Linear Attention
 
 If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
-\\[
+\\(
 QK^{\top} \in \mathbb{R}^{N \times N},
-\\]
+\\)
 and its computational complexity is
-\\[
+\\(
 \mathcal{O}(N^{2}),
-\\]
+\\)
 
-Under the long-context reasoning tasks, the 
+Under long-context reasoning tasks, the quadratic growth of the attention operation becomes a major bottleneck, since increasing the sequence length \\(N\\) leads to a rapid increase in both computation and memory cost. As \\(N\\) grows into the hundreds of thousands or millions, storing and manipulating the full \(N \times N\) attention matrix becomes infeasible, motivating the development of more efficient attention mechanisms that reduce or avoid the \\(\mathcal{O}(N^{2})\\) complexity.
 
 
 
