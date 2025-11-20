@@ -1,5 +1,5 @@
 ---
-title: 'Efficient Model Architectures: Linear Attention, State-Space Models and So On. (1) '
+title: 'Efficient Methods for Generative Models 1: Linear Attention, State-Space Models, and Linear RNNs'
 date: 2025-11-20
 permalink: /posts/2025/11/blog-1-efficent/
 tags:
@@ -29,13 +29,16 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 ## Introduction to Linear Attention
 
-The scaled dot-product attention (SDPA) is defined as:
-
+If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
 \\[
-\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{Q K^\top}{\sqrt{d_k}}\right) V
+QK^{\top} \in \mathbb{R}^{N \times N},
+\\]
+and its computational complexity is
+\\[
+\mathcal{O}(N^{2}),
 \\]
 
-where $$Q$$ is the query matrix, $$K$$ is the key matrix, $$V$$ is the value matrix and $$d_k$$ is the dimensionality of the key vectors. Transformer, however, due to the time complexity of matrix multipication on $$Q$$ and $$K^{\top}$$ (which $$QK^{\top} \RightArrow \mathcal{O}()$$)
+Under the long-context reasoning tasks, the 
 
 
 
