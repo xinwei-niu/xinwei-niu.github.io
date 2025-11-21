@@ -55,6 +55,18 @@ Then came Linear Attention [5], which pushed things even further by reducing the
 
 State-Space Models are 
 
+Structured State Space sequence model (S4) [7]
+
+HIPPO
+
+
+Recurrent Mode:
+
+Parallel Mode:
+
+
+
+Mamba 2 []
 
 
 
@@ -83,10 +95,12 @@ State-Space Models are
 
 [6] Schlag, I., Irie, K., & Schmidhuber, J. (2021, July). Linear transformers are secretly fast weight programmers. In International conference on machine learning (pp. 9355-9366). PMLR.
 
+[7] Gu, A., Goel, K., & Ré, C. (2021). Efficiently modeling long sequences with structured state spaces. arXiv preprint arXiv:2111.00396.
 
-[7] Yang, S., Wang, B., Zhang, Y., Shen, Y., & Kim, Y. (2024). Parallelizing linear transformers with the delta rule over sequence length. Advances in neural information processing systems, 37, 115491-115522.
+[8] Gu, A., & Dao, T. (2024, May). Mamba: Linear-time sequence modeling with selective state spaces. In First conference on language modeling.
 
+[] Yang, S., Wang, B., Zhang, Y., Shen, Y., & Kim, Y. (2024). Parallelizing linear transformers with the delta rule over sequence length. Advances in neural information processing systems, 37, 115491-115522.
 
-[8] Yang, S., Kautz, J., & Hatamizadeh, A. (2024). Gated delta networks: Improving mamba2 with delta rule. arXiv preprint arXiv:2412.06464.
+[] Yang, S., Kautz, J., & Hatamizadeh, A. (2024). Gated delta networks: Improving mamba2 with delta rule. arXiv preprint arXiv:2412.06464.
 
-[9] Team Kimi(2025). Kimi Linear: An Expressive, Efficient Attention Architecture. arXiv preprint arXiv:2510.26692.
+[] Team Kimi(2025). Kimi Linear: An Expressive, Efficient Attention Architecture. arXiv preprint arXiv:2510.26692.
