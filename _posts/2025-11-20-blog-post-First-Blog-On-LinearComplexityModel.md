@@ -46,10 +46,7 @@ Under long-context reasoning tasks, the quadratic growth of the attention operat
 
 Hence, later works started looking for clever ways to get around this massive computation bottleneck. One of the first big ideas was Locality-Sensitive Hashing (LSH) Attention [4], which cuts the complexity down to \\(\mathcal{O}(N \log N)\\). The trick here is simple but powerful: instead of comparing every token with every other token, LSH groups similar tokens into buckets so that attention only happens within those smaller groups. Fewer comparisons, faster models.
 
-Then came Linear Attention [5], which pushed things even further by reducing the cost to linear time, \\(\mathcal{O}(N)\\). By rethinking the softmax attention itself: Instead of explicitly building the full attention matrix, Linear Attention rewrites the operation using kernel functions so that attention can be computed through a series of efficient matrix multiplications. The result is that you get attention-like behavior without paying the quadratic price.
-
-
-Starting from standard softmax attention, given queries \\(Q\in\mathbb{R}^{N\times d}\\), keys \\(K\in\mathbb{R}^{N\times d}\\), and values \\(V\in\mathbb{R}^{N\times d_v}\\), the usual form is \\[ \mathrm{Att}(Q,K,V)=\operatorname{softmax}\!\\big(QK^{\top}\\big)V \\] which for each query row becomes \\( y_i=\frac{\sum_{j=1}^N \exp(q_i^\top k_j)v_j}{\sum_{j=1}^N \exp(q_i^\top k_j)} \\). Linear attention assumes that the exponential kernel can be approximated or represented by a feature map \\(\phi\\) such that \\( \exp(q^\top k)=\phi(q)^\top \phi(k) \\). Substituting this into the numerator yields \\[ \sum_{j=1}^N \exp(q_i^\top k_j)v_j = \phi(q_i)^\top \left( \sum_{j=1}^N \phi(k_j)v_j^\top \right), \\] allowing us to define \\( S=\phi(K)^\top V \\) so that all numerators can be written compactly as \\( \phi(Q)S = \phi(Q)(\phi(K)^\top V) \\). Similarly, the denominator becomes \\[ \sum_{j=1}^N \exp(q_i^\top k_j)=\phi(q_i)^\top \left( \sum_{j=1}^N \phi(k_j) \right), \\] and defining \\( z=\phi(K)^\top \mathbf{1}_N \\) gives the denominator vector as \\( \phi(Q)z \\). Combining numerator and denominator gives the linear-attention approximation: \\[ \mathrm{Att}(Q,K,V)=\frac{\phi(Q)(\phi(K)^\top V)}{\phi(Q)(\phi(K)^\top \mathbf{1}_N)}, \\] and in row-wise form \\( y_i=\frac{\phi(q_i)^\top S}{\phi(q_i)^\top z} \\), where \\( S=\phi(K)^\top V \\) and \\( z=\phi(K)^\top \mathbf{1}_N \\). Since \\(S\\) and \\(z\\) are computed once in \\(\mathcal{O}(N)\\) time and reused for all queries, the overall complexity becomes linear in sequence length, yielding the key efficiency benefit of linear attention.
+Then came Linear Attention [5], which pushed things even further by reducing the cost to linear time, \\(\mathcal{O}(N)\\). By rethinking the softmax attention itself: Instead of explicitly building the full attention matrix, Linear Attention rewrites the operation using kernel functions so that attention can be computed through a series of efficient matrix multiplications. The result is that you get attention-like behavior without paying the quadratic price. It assumes that the exponential kernel can be approximated or represented by a feature map \\(\phi\\) such that \\( \exp(q^\top k)=\phi(q)^\top \phi(k) \\). Substituting this into the numerator yields \\[ \sum_{j=1}^N \exp(q_i^\top k_j)v_j = \phi(q_i)^\top \left( \sum_{j=1}^N \phi(k_j)v_j^\top \right), \\] allowing us to define \\( S=\phi(K)^\top V \\) so that all numerators can be written compactly as \\( \phi(Q)S = \phi(Q)(\phi(K)^\top V) \\). Similarly, the denominator becomes \\[ \sum_{j=1}^N \exp(q_i^\top k_j)=\phi(q_i)^\top \left( \sum_{j=1}^N \phi(k_j) \right), \\] and defining \\( z=\phi(K)^\top \mathbf{1}_N \\) gives the denominator vector as \\( \phi(Q)z \\). Combining numerator and denominator gives the linear-attention approximation: \\[ \mathrm{Att}(Q,K,V)=\frac{\phi(Q)(\phi(K)^\top V)}{\phi(Q)(\phi(K)^\top \mathbf{1}_N)}, \\] and in row-wise form \\( y_i=\frac{\phi(q_i)^\top S}{\phi(q_i)^\top z} \\), where \\( S=\phi(K)^\top V \\) and \\( z=\phi(K)^\top \mathbf{1}_N \\). Since \\(S\\) and \\(z\\) are computed once in \\(\mathcal{O}(N)\\) time and reused for all queries, the overall complexity becomes linear in sequence length, yielding the key efficiency benefit of linear attention.
 
 
 
@@ -63,6 +60,8 @@ State-Space Models are
 
 ---
 ## DeltaNet and Future Work
+
+
 
 
 
@@ -82,6 +81,12 @@ State-Space Models are
 
 [5] Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020, November). Transformers are rnns: Fast autoregressive transformers with linear attention. In International conference on machine learning (pp. 5156-5165). PMLR.
 
-[6] 
+[6] Schlag, I., Irie, K., & Schmidhuber, J. (2021, July). Linear transformers are secretly fast weight programmers. In International conference on machine learning (pp. 9355-9366). PMLR.
 
 
+[7] Yang, S., Wang, B., Zhang, Y., Shen, Y., & Kim, Y. (2024). Parallelizing linear transformers with the delta rule over sequence length. Advances in neural information processing systems, 37, 115491-115522.
+
+
+[8] Yang, S., Kautz, J., & Hatamizadeh, A. (2024). Gated delta networks: Improving mamba2 with delta rule. arXiv preprint arXiv:2412.06464.
+
+[9] Team Kimi(2025). Kimi Linear: An Expressive, Efficient Attention Architecture. arXiv preprint arXiv:2510.26692.
