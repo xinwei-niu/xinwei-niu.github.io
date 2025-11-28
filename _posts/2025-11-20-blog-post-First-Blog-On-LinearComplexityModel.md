@@ -7,9 +7,9 @@ tags:
   - Machine Learning
   - Long Context
   - Linear Attention
+layout: single
 sidebar:
-  nav: false
-toc: false
+  enabled: false
 ---
 
 Modern sequence modeling has evolved from recurrent architectures to attention-based models and, more recently, state-space approaches. Traditional RNNs introduced an efficient way to process sequential data but struggled with long-term dependencies. Transformers later revolutionized the field with attention mechanisms, though their quadratic cost limits scalability to long contexts. This has driven research into more efficient alternatives—such as linear attention, state-space models like S4 and Mamba, and newer architectures like DeltaNet, that aim to combine scalability, stability, and strong modeling capacity for long-range sequence tasks.
