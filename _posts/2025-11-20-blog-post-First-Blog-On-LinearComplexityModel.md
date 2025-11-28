@@ -77,11 +77,22 @@ Mamba 2 further refines this design by improving numerical conditioning, paramet
 
 ---
 
-## DeltaNet and Future Work
+## RetNet, FWP, and DeltaNet
+
+
+<div style="display: flex; justify-content: center; gap: 20px;">
+  <img src="/files/parallel.png" alt="Image 1" style="width: 45%;">
+  <img src="/files/recurrent.png" alt="Image 2" style="width: 45%;">
+</div>
+
+
 
 DeltaNet explores the intermediate space between purely recurrent SSMs and fully parallelizable convolutional or attention-based architectures. Its design decomposes the sequence update into components that can be executed either in parallel or recurrently, allowing the model to capture long-range dependencies while maintaining predictable latency. DeltaNet variants often incorporate structured transitions combined with delta-function or short-range convolutional updates, enabling them to achieve strong performance on long-context tasks while remaining simpler to implement and optimize compared to fully diagonalized SSMs.
 
 Future research directions include advancing the theoretical understanding of structured transition operators, particularly the stability properties of diagonal-plus-low-rank parameterizations under input-dependent modulation. Hardware-aware model design remains another important goal, as efficient execution of SSMs increasingly depends on custom fused kernels, memory layouts, and prefix-scan algorithms. Hybrid architectures that combine SSMs with sparse or content-based attention are also promising, offering ways to capture both long-range and local interactions efficiently. Finally, emerging directions such as adaptive state dimension, learnable discretization schemes, quantized SSM inference, and multimodal selective SSMs present exciting opportunities for further improving scalability and applicability.
+
+
+# Hybrid Models
 
 
 
