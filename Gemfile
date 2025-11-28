@@ -7,8 +7,8 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jemoji'
   gem 'webrick', '~> 1.8'
-  gem "jekyll-scholar", "~> 6.8.1"
-  gem "bibtex-ruby", "~> 5.1.7"
+  gem "jekyll-scholar"
+  gem "bibtex-ruby"
 end
 
 gem 'github-pages'
