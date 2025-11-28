@@ -58,24 +58,26 @@ Then came Linear Attention [5], which pushed things even further by reducing the
 ## State-Space Model: S4, Mamba and Mamba 2
 
 State-space models (SSMs) provide a mathematically grounded framework for sequence modeling by representing long-range temporal dependencies through latent linear dynamical systems. A generic continuous-time SSM is expressed as
-\[
+\\[
 \dot{x}(t) = A x(t) + B u(t), \qquad y(t) = C x(t) + D u(t),
-\]
-which, after discretization, yields a structured recurrence that can be evaluated either sequentially or in parallel. The challenge in modern deep learning applications is to parameterize these systems such that they remain stable, expressive, and computationally efficient on long sequences. Recent advances have focused on imposing algebraic structure on the transition matrix \(A\) to enable fast convolution, efficient parallelization, and numerically stable training. 
+\\]
+which, after discretization, yields a structured recurrence that can be evaluated either sequentially or in parallel. The challenge in modern deep learning applications is to parameterize these systems such that they remain stable, expressive, and computationally efficient on long sequences. Recent advances have focused on imposing algebraic structure on the transition matrix \\(A\\) to enable fast convolution, efficient parallelization, and numerically stable training. 
 
-The Structured State Space sequence model (S4) is a foundational example of this line of work. S4 draws heavily on the HiPPO (High-Order Polynomial Projection Operators) method to initialize state dynamics in a basis capable of retaining long-range history. S4 represents the continuous-time transition matrix \(A\) in a **Normal Plus Low-Rank (NPLR)** form, ensuring controlled spectral properties while maintaining flexibility. Through a learned similarity transformation, this representation is converted into a **Diagonal Plus Low-Rank (DPLR)** form. The diagonal component allows exact and efficient discretization and supports parallel prefix multiplication, while the low-rank correction is applied using Woodbury-style updates. This architecture enables fast kernel generation and efficient convolution-based evaluation, allowing S4 to model long sequences with high stability and strong gradient flow.
+The Structured State Space sequence model (S4) is a foundational example of this line of work. S4 draws heavily on the HiPPO (High-Order Polynomial Projection Operators) method to initialize state dynamics in a basis capable of retaining long-range history. S4 represents the continuous-time transition matrix \\(A\\) in a **Normal Plus Low-Rank (NPLR)** form, ensuring controlled spectral properties while maintaining flexibility. Through a learned similarity transformation, this representation is converted into a **Diagonal Plus Low-Rank (DPLR)** form. The diagonal component allows exact and efficient discretization and supports parallel prefix multiplication, while the low-rank correction is applied using Woodbury-style updates. This architecture enables fast kernel generation and efficient convolution-based evaluation, allowing S4 to model long sequences with high stability and strong gradient flow.
 
 Mamba extends this framework by introducing **selective** state-space updates, where the discretized recurrence is modulated by input-dependent gates. Instead of a fixed state update
-\[
-x_{t+1} = \overline{A} x_t + \overline{B} u_t,
-\]
-Mamba applies elementwise modulation,
-\[
-x_{t+1} = f_t \odot (\overline{A} x_t) + g_t \odot (\overline{B} u_t),
-\]
-where the gates \(f_t\) and \(g_t\) are dynamically computed from the input sequence. This allows the model to selectively retain, suppress, or transform information at each timestep while preserving the computational structure of the underlying SSM. The key advantage of Mamba lies in the fact that the gating functions augment expressivity without sacrificing linear-time recurrence or the ability to execute fast parallel prefix computations.
 
-**Recurrent mode** evaluation in Mamba processes tokens sequentially and operates in \(O(N)\) per timestep, where \(N\) is the state dimension. GPU implementations typically fuse the diagonal evolution, low-rank correction, and gating operations into a single kernel to minimize memory movement. This yields high streaming throughput suitable for autoregressive inference and online applications. In contrast, **parallel mode** evaluation constructs a time-varying convolution kernel induced by the gated recurrence. Since the coefficients depend on the input, Mamba performs a parallel prefix-product over the diagonal dynamics and integrates low-rank corrections in a block-wise manner. This allows efficient training on long sequences and batch inference, although the algorithmic structure is more complex than in fixed-parameter SSMs such as S4.
+\\[
+x_{t+1} = \overline{A} x_t + \overline{B} u_t,
+\\]
+Mamba applies elementwise modulation,
+\\[
+x_{t+1} = f_t \odot (\overline{A} x_t) + g_t \odot (\overline{B} u_t),
+\\]
+
+where the gates \\(f_t\\) and \\(g_t\\) are dynamically computed from the input sequence. This allows the model to selectively retain, suppress, or transform information at each timestep while preserving the computational structure of the underlying SSM. The key advantage of Mamba lies in the fact that the gating functions augment expressivity without sacrificing linear-time recurrence or the ability to execute fast parallel prefix computations.
+
+**Recurrent mode** evaluation in Mamba processes tokens sequentially and operates in \\(O(N)\\) per timestep, where \\(N\\) is the state dimension. GPU implementations typically fuse the diagonal evolution, low-rank correction, and gating operations into a single kernel to minimize memory movement. This yields high streaming throughput suitable for autoregressive inference and online applications. In contrast, **parallel mode** evaluation constructs a time-varying convolution kernel induced by the gated recurrence. Since the coefficients depend on the input, Mamba performs a parallel prefix-product over the diagonal dynamics and integrates low-rank corrections in a block-wise manner. This allows efficient training on long sequences and batch inference, although the algorithmic structure is more complex than in fixed-parameter SSMs such as S4.
 
 Mamba 2 further refines this design by improving numerical conditioning, parameter efficiency, and hardware alignment. From a modeling perspective, Mamba 2 adopts more stable parameterizations for the diagonal and low-rank components, ensuring contractive behavior under long prefix-product scans and reducing sensitivity to mixed-precision training. Algorithmically, Mamba 2 introduces a more efficient parallel scan procedure that avoids explicit storage of per-timestep kernel factors, significantly reducing memory overhead. Systems-level optimizations include a redesigned layout for state vectors and parameters to maximize GPU coalescing, as well as enhanced fused kernels that reduce launch overhead and exploit register-level tiling. These improvements yield faster training, lower memory consumption, and more robust behavior on very long sequences. Overall, Mamba 2 represents an evolution of the selective SSM framework that is both theoretically more stable and practically more hardware-efficient.
 
