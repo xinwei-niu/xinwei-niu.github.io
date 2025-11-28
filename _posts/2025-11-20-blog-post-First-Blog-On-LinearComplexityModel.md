@@ -31,7 +31,7 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 
 ## Introduction to Linear Attention
-The attention mechanism in the **Transformer**[^1] involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
+The attention mechanism in the **Transformer**{% cite vaswani2023attentionneed %} involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
 If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
 \\(
 QK^{\top} \in \mathbb{R}^{N \times N},
@@ -98,24 +98,5 @@ Future research directions include advancing the theoretical understanding of st
 
 ### References
 
-[^1] Hochreiter, S., & Schmidhuber, J. (1997). Long short-term memory. Neural computation, 9(8), 1735-1780.
+{% bibliography --cited %}
 
-[^2] Cho, K., Van Merriënboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., & Bengio, Y. (2014). Learning phrase representations using RNN encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078.
-
-[^3] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. Advances in neural information processing systems, 30.
-
-[^4] Kitaev, N., Kaiser, Ł., & Levskaya, A. (2020). Reformer: The efficient transformer. arXiv preprint arXiv:2001.04451.
-
-[^5] Katharopoulos, A., Vyas, A., Pappas, N., & Fleuret, F. (2020, November). Transformers are rnns: Fast autoregressive transformers with linear attention. In International conference on machine learning (pp. 5156-5165). PMLR.
-
-[^6] Schlag, I., Irie, K., & Schmidhuber, J. (2021, July). Linear transformers are secretly fast weight programmers. In International conference on machine learning (pp. 9355-9366). PMLR.
-
-[^7] Gu, A., Goel, K., & Ré, C. (2021). Efficiently modeling long sequences with structured state spaces. arXiv preprint arXiv:2111.00396.
-
-[^8] Gu, A., & Dao, T. (2024, May). Mamba: Linear-time sequence modeling with selective state spaces. In First conference on language modeling.
-
-[^] Yang, S., Wang, B., Zhang, Y., Shen, Y., & Kim, Y. (2024). Parallelizing linear transformers with the delta rule over sequence length. Advances in neural information processing systems, 37, 115491-115522.
-
-[^] Yang, S., Kautz, J., & Hatamizadeh, A. (2024). Gated delta networks: Improving mamba2 with delta rule. arXiv preprint arXiv:2412.06464.
-
-[^] Team Kimi(2025). Kimi Linear: An Expressive, Efficient Attention Architecture. arXiv preprint arXiv:2510.26692.
