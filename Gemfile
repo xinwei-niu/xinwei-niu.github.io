@@ -7,7 +7,6 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jemoji'
   gem 'webrick', '~> 1.8'
-  gem 'github-pages', "~> 223", group: :jekyll_plugins
   gem "jekyll-include-cache", group: :jekyll_plugins
   gem 'jekyll-scholar', group: :jekyll_plugins
 end
