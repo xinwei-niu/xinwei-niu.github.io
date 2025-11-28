@@ -7,6 +7,7 @@ tags:
   - Machine Learning
   - Long Context
   - Linear Attention
+toc: true
 ---
 
 Modern sequence modeling has evolved from recurrent architectures to attention-based models and, more recently, state-space approaches. Traditional RNNs introduced an efficient way to process sequential data but struggled with long-term dependencies. Transformers later revolutionized the field with attention mechanisms, though their quadratic cost limits scalability to long contexts. This has driven research into more efficient alternatives—such as linear attention, state-space models like S4 and Mamba, and newer architectures like DeltaNet, that aim to combine scalability, stability, and strong modeling capacity for long-range sequence tasks.
@@ -31,7 +32,7 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 
 ## Introduction to Linear Attention
-The attention mechanism in the **Transformer** {% cite vaswani2023attentionneed %} involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
+The attention mechanism in the **Transformer** {% cite vaswani2023attentionneed %}involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
 If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
 \\(
 QK^{\top} \in \mathbb{R}^{N \times N},
