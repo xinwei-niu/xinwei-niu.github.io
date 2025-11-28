@@ -86,11 +86,16 @@ Mamba 2 further refines this design by improving numerical conditioning, paramet
 
 <figure style="text-align: center;">
   <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="/files/parallel.png" alt="Parallel Model" style="width: 30%;">
-    <img src="/files/recurrent.png" alt="Recurrent Model" style="width: 60%;">
+    <img src="/files/parallel.png"
+         alt="Parallel"
+         style="max-width: 30%; height: auto;">
+    <img src="/files/recurrent.png"
+         alt="Recurrent"
+         style="max-width: 60%; height: auto;">
   </div>
+
   <figcaption style="margin-top: 10px; font-style: italic;">
-    Figure: Comparison of parallel and recurrent computation models.
+    Figure: Parallel vs. recurrent mode of RetNet [9].
   </figcaption>
 </figure>
 
@@ -127,6 +132,11 @@ Future research directions include advancing the theoretical understanding of st
 [7] Gu, A., Goel, K., & Ré, C. (2021). Efficiently modeling long sequences with structured state spaces. arXiv preprint arXiv:2111.00396.
 
 [8] Gu, A., & Dao, T. (2024, May). Mamba: Linear-time sequence modeling with selective state spaces. In First conference on language modeling.
+
+[9] Sun, Y., Dong, L., Huang, S., Ma, S., Xia, Y., Xue, J., ... & Wei, F. (2023). Retentive network: A successor to transformer for large language models. arXiv preprint arXiv:2307.08621.
+
+
+
 
 [] Yang, S., Wang, B., Zhang, Y., Shen, Y., & Kim, Y. (2024). Parallelizing linear transformers with the delta rule over sequence length. Advances in neural information processing systems, 37, 115491-115522.
 
