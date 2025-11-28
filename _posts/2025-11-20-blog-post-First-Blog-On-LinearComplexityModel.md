@@ -84,11 +84,15 @@ Mamba 2 further refines this design by improving numerical conditioning, paramet
 ## RetNet, FWP, and DeltaNet
 
 
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/files/parallel.png" alt="Image 1" style="width: 30%;">
-  <img src="/files/recurrent.png" alt="Image 2" style="width: 60%;">
-</div>
-
+<figure style="text-align: center;">
+  <div style="display: flex; justify-content: center; gap: 20px;">
+    <img src="/files/parallel.png" alt="Parallel Model" style="width: 30%;">
+    <img src="/files/recurrent.png" alt="Recurrent Model" style="width: 60%;">
+  </div>
+  <figcaption style="margin-top: 10px; font-style: italic;">
+    Figure: Comparison of parallel and recurrent computation models.
+  </figcaption>
+</figure>
 
 
 DeltaNet explores the intermediate space between purely recurrent SSMs and fully parallelizable convolutional or attention-based architectures. Its design decomposes the sequence update into components that can be executed either in parallel or recurrently, allowing the model to capture long-range dependencies while maintaining predictable latency. DeltaNet variants often incorporate structured transitions combined with delta-function or short-range convolutional updates, enabling them to achieve strong performance on long-context tasks while remaining simpler to implement and optimize compared to fully diagonalized SSMs.
