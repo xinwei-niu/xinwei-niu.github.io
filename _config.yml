@@ -162,6 +162,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - .nojekyll
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

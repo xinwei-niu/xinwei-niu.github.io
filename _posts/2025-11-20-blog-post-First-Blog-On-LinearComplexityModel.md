@@ -31,7 +31,7 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 
 ## Introduction to Linear Attention
-The attention mechanism in the **Transformer**{% cite vaswani2023attentionneed %} involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
+The attention mechanism in the **Transformer** {% cite vaswani2023attentionneed %} involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
 If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
 \\(
 QK^{\top} \in \mathbb{R}^{N \times N},
