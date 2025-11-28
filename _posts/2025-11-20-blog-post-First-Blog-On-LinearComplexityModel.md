@@ -81,8 +81,8 @@ Mamba 2 further refines this design by improving numerical conditioning, paramet
 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <img src="/files/parallel.png" alt="Image 1" style="width: 45%;">
-  <img src="/files/recurrent.png" alt="Image 2" style="width: 45%;">
+  <img src="/files/parallel.png" alt="Image 1" style="width: 30%;">
+  <img src="/files/recurrent.png" alt="Image 2" style="width: 60%;">
 </div>
 
 
