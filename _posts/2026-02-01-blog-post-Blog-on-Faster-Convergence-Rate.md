@@ -21,7 +21,7 @@ This blog is based on *Real Analysis* by Elias M. Stein and Rami Shakarchi, and 
 Here are the prerequisites for understanding RKHS:
 ### 1.1 Kernel Functions
 
-(Definition 1.1) **Hilbert Space**: A Hilbert Space \(\mathcal{H}\) is a vector space with an inner product \(\langle f,g\rangle_\mathcal{H}\) where the norm is defined by \(||f||_\mathcal{H} = \sqrt{\langle f,f\rangle_\mathcal{H}} \). (\(L^2\) space is a type of Hilbert Space.)
+(Definition 1.1) **Hilbert Space**: A Hilbert Space \(\mathcal{H}\) is a vector space with an inner product \(\langle f,g\rangle_\mathcal{H}\) where the norm is defined by \(\|f\|_\mathcal{H} = \sqrt{\langle f,f\rangle_\mathcal{H}} \). (\(L^2\) space is a type of Hilbert Space.)
 
 
 (Theorem 1.1) **Riesz Representation Theorem**: Every continuous linear functional \(\Phi\) can be written in the form:
@@ -46,7 +46,7 @@ The Neural Tangent Kernel (NTK) is a tool that allows us to treat a deep neural 
 
 ### 2.2 Lazy Training
 
-Under over-parameterized settings, the network enters a regime known as Lazy Training. In this state, because the model has an abundance of parameters, the "effort" required to minimize the loss is spread across so many neurons that each individual weight only needs to move an infinitesimal distance from its random initialization $\theta_0$.Mathematically, the parameters $\theta$ stay so close to $\theta_0$ that the model can be linearized via a Taylor expansion:$$f(x, \theta) \approx f(x, \theta_0) + \nabla_\theta f(x, \theta_0)^T (\theta - \theta_0)$$Because the weights barely move, the features learned by the network are essentially the random features present at initialization.
+Under over-parameterized settings, the network enters a regime known as Lazy Training. In this state, because the model has an abundance of parameters, the "effort" required to minimize the loss is spread across so many neurons that each individual weight only needs to move an infinitesimal distance from its random initialization $\theta_0$.Mathematically, the parameters $\theta$ stay so close to $\theta_0$ that the model can be linearized via a Taylor expansion:$$f(x, \theta) \approx f(x, \theta_0) + \nabla_\theta f(x, \theta_0)^\top (\theta - \theta_0)$$Because the weights barely move, the features learned by the network are essentially the random features present at initialization.
 
 
 ### 2.3 Definition of Neural Tangent Kernels
