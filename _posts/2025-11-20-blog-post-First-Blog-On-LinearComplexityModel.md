@@ -33,8 +33,8 @@ Despite this efficiency, standard RNNs face significant training challenges, pri
 
 ---
 
-
 ## Introduction to Linear Attention
+
 The attention mechanism in the **Transformer**[1] involves computing pairwise interactions between all tokens in the sequence. Given $$Q, K, $$ and $$V$$ which are query, key, value respectively, 
 If \\(Q \in \mathbb{R}^{N \times d}\\) and \\(K \in \mathbb{R}^{N \times d}\\), then the attention score matrix is
 \\(
@@ -46,7 +46,6 @@ and its computational complexity is
 \\)
 
 Under long-context reasoning tasks, the quadratic growth of the attention operation becomes a major bottleneck, since increasing the sequence length \\(N\\) leads to a rapid increase in both computation and memory cost. As \\(N\\) grows into the hundreds of thousands or millions, storing and manipulating the full \\(N \times N\\) attention matrix becomes infeasible, motivating the development of more efficient attention mechanisms that reduce or avoid the \\(\mathcal{O}(N^{2})\\) complexity.
-
 
 Hence, later works started looking for clever ways to get around this massive computation bottleneck. One of the first big ideas was Locality-Sensitive Hashing (LSH) Attention [4], which cuts the complexity down to \\(\mathcal{O}(N \log N)\\). The trick here is simple but powerful: instead of comparing every token with every other token, LSH groups similar tokens into buckets so that attention only happens within those smaller groups. Fewer comparisons, faster models.
 
