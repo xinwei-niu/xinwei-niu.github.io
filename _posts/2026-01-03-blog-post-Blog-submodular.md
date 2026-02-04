@@ -33,11 +33,6 @@ A set function \( f : 2^{V} \rightarrow \mathbb{R} \) is said to satisfy the **d
 f(A \cup \{x\}) - f(A) \geq f(B \cup \{x\}) - f(B).
 \]
 
-**Useful properties:**
-*Monotone:*
-*Normalized:*
 
-
-submodular maximization
 
 
