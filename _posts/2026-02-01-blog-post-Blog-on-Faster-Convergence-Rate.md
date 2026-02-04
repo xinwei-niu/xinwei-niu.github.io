@@ -46,18 +46,18 @@ The Neural Tangent Kernel (NTK) is a tool that allows us to treat a deep neural 
 
 ### 2.2 Lazy Training
 
-Under over-parameterized settings, the network enters a regime known as Lazy Training. In this state, because the model has an abundance of parameters, the "effort" required to minimize the loss is spread across so many neurons that each individual weight only needs to move an infinitesimal distance from its random initialization $\theta_0$.Mathematically, the parameters \\(\theta)\\ stay so close to \\(\theta_0\\) that the model can be linearized via a Taylor expansion:\\[f(x, \theta) \approx f(x, \theta_0) + \nabla_\theta f(x, \theta_0)^\top (\theta - \theta_0)\\] 
+Under over-parameterized settings, the network enters a regime known as Lazy Training. In this state, because the model has an abundance of parameters, the "effort" required to minimize the loss is spread across so many neurons that each individual weight only needs to move an infinitesimal distance from its random initialization \\(\theta_0\\).Mathematically, the parameters \\(\theta\\) stay so close to \\(\theta_0\\) that the model can be linearized via a Taylor expansion:\\[f(x, \theta) \approx f(x, \theta_0) + \nabla_\theta f(x, \theta_0)^\top (\theta - \theta_0)\\] 
 Because the weights barely move, the features learned by the network are essentially the random features present at initialization.
 
 
 ### 2.3 Definition of Neural Tangent Kernels
 
-For a neural network $f(x, \theta)$, the NTK $\Theta$ is defined by the inner product of the gradients of the model output with respect to its parameters:\\[\Theta(x, x') = \sum_{p=1}^P \frac{\partial f(x, \theta)}{\partial \theta_p} \frac{\partial f(x', \theta)}{\partial \theta_p} = \langle \nabla_\theta f(x, \theta), \nabla_\theta f(x', \theta) \rangle\\]
+For a neural network \\(f(x, \theta)\\), the NTK \\(\Theta\\) is defined by the inner product of the gradients of the model output with respect to its parameters:\\[\Theta(x, x') = \sum_{p=1}^P \frac{\partial f(x, \theta)}{\partial \theta_p} \frac{\partial f(x', \theta)}{\partial \theta_p} = \langle \nabla_\theta f(x, \theta), \nabla_\theta f(x', \theta) \rangle\\]
 In the infinite-width limit, this kernel becomes deterministic and remains constant throughout the entire training process.
 
 ### 2.4 Connection between NTK and RKHS
 
-The connection is established by viewing the gradient $\nabla_\theta f(x, \theta_0)$ as a feature map $\Phi(x)$. According to the Moore-Aronszajn Theorem, the NTK defines a unique RKHS \\(\mathcal{H}_{ntk}\\). Training an infinite-width neural network with gradient descent is mathematically equivalent to finding the minimum-norm solution in this RKHS, essentially performing Kernel Ridge Regression with the NTK.
+The connection is established by viewing the gradient \\(\nabla_\theta f(x, \theta_0)\\) as a feature map \\(\Phi(x)\\). According to the Moore-Aronszajn Theorem, the NTK defines a unique RKHS \\(\mathcal{H}_{ntk}\\). Training an infinite-width neural network with gradient descent is mathematically equivalent to finding the minimum-norm solution in this RKHS, essentially performing Kernel Ridge Regression with the NTK.
 
 
 ## 3. Application of Neural Tangent Kernel in Deep Learning
