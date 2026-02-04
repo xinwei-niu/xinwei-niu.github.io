@@ -1,7 +1,7 @@
 ---
 title: 'Non-convex optimization for Over-parameterized Neural Nets: Reproducing Kernel Hilbert Space and Neural Tangent Kernel'
-date: 2025-02-01
-permalink: /posts/2025/11/blog-RKHS/
+date: 2026-02-01
+permalink: /posts/2026/02/blog-RKHS/
 tags:
   - Reproducing Hilbert Space
   - Neural Tangent Kernel
@@ -16,23 +16,23 @@ author_profile: false
 This blog is based on *Real Analysis* by Elias M. Stein and Rami Shakarchi, and *Learning Theory on First Principles* by Francis Bach.
 
 
-## 1. Reproducing Kernel Hilbert Space
+## 1. Reproducing Kernel Hilbert Space(RKHS)
  
 Here are the prerequisites for understanding RKHS:
 ### 1.1 Kernel Functions
 
-(Definition 1.1) **Hilbert Space**: A Hilbert Space \(\mathcal{H}\) is a vector space with an inner product \(\langle f,g\rangle_\mathcal{H}\) where the norm is defined by \(\|f\|_\mathcal{H} = \sqrt{\langle f,f\rangle_\mathcal{H}} \). (\(L^2\) space is a type of Hilbert Space.)
+(Definition 1.1) **Hilbert Space**: A Hilbert Space \\(\mathcal{H}\\) is a vector space with an inner product \\(\langle f,g\rangle_\mathcal{H}\\) where the norm is defined by \\(\|f\|_\mathcal{H} = \sqrt{\langle f,f\rangle_\mathcal{H}} \\). (\\(L^2\\) space is a type of Hilbert Space.)
 
 
-(Theorem 1.1) **Riesz Representation Theorem**: Every continuous linear functional \(\Phi\) can be written in the form:
+(Theorem 1.1) **Riesz Representation Theorem**: Every continuous linear functional \\(\Phi\\) can be written in the form:
 
-\[\Phi(f) = \langle f, g \rangle\] for some appropriate element \(g \in \mathcal{H}\).
+\\[\Phi(f) = \langle f, g \rangle\\] for some appropriate element \\(g \in \mathcal{H}\\).
 
-(Definition 1.2) **Reproducing Property of RKHS**: A kernel of Hilbert Space has the reproducing property if, given an kernel function \(K(\cdot, x)\), define a reproducing kernel feature map \(\Phi: \mathcal{X} \rightarrow \mathbb{R}^\mathcal{X}\) which satisfies:
+(Definition 1.2) **Reproducing Property of RKHS**: A kernel of Hilbert Space has the reproducing property if, given an kernel function \\(K(\cdot, x)\\), define a reproducing kernel feature map \\(\Phi: \mathcal{X} \rightarrow \mathbb{R}^\mathcal{X}\\) which satisfies:
 
-\[\Phi (x) = \langle\Phi(\cdot), K(\cdot, x)\rangle\]
+\\[\Phi (x) = \langle\Phi(\cdot), K(\cdot, x)\rangle\\]
 
-(Theorem 1.2) **Moore-Aronszajn Theorem**: For every positive definite kernel function \(K: \mathbb{R}^N \times \mathbb{R}^N \rightarrow \mathbb{R}\), there exists a Hilbert Space \(\mathcal{H}\) with \(K\) as its reproducing kernel.
+(Theorem 1.2) **Moore-Aronszajn Theorem**: For every positive definite kernel function \\(K: \mathbb{R}^N \times \mathbb{R}^N \rightarrow \mathbb{R}\\), there exists a Hilbert Space \\(\mathcal{H}\\) with \\(K\\) as its reproducing kernel.
 
 
 
