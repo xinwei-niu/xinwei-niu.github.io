@@ -3,8 +3,9 @@ title: 'Online Convex Optimization and Accelerated Gradient Descent Methods for 
 date: 2026-02-04
 permalink: /posts/2026/02/blog-Triton/
 tags:
-  - GPU programming
-  - Fused Kernel
+  - Convex Optimization
+  - Online Optimization
+  - Nesterov Accelerated Gradient
 
 layout: single
 sidebar:
