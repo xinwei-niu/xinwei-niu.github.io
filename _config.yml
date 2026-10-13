@@ -165,6 +165,10 @@ include:
   - _pages
   - files
 exclude:
+  # CV sources remain in the repository but are not published.
+  - _pages/cv.md
+  - _pages/cv-json.md
+  - files/Xinwei_s_CV.pdf
   # AcademicPages sample publications are not personal publications.
   - _publications/2009-10-01-paper-title-number-1.md
   - _publications/2010-10-01-paper-title-number-2.md
@@ -312,7 +316,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Taipei # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

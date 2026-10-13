@@ -12,7 +12,7 @@ redirect_from:
 
 I am a Research Assistant in **Encode Lab at [Westlake University](https://westlake.edu.cn/)**, Hangzhou, China, working under the supervision of **[Huan Wang](https://huanwang.tech/)**. My research focuses on efficient generative models, particularly methods that reduce the computational and memory costs of large language model inference.
 
-[Curriculum Vitae]({{ '/cv/' | relative_url }}) · [Email](mailto:nxw2002@outlook.com) · [GitHub](https://github.com/xinwei-niu)
+[Email](mailto:nxw2002@outlook.com) · [GitHub](https://github.com/xinwei-niu)
 
 ## Research Interests
 
