@@ -12,11 +12,11 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Xinwei Niu"
 title_separator          : "-"
 name                     : &name "Xinwei Niu"
-description              : &description "Xinwei's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Xinwei Niu — Research Assistant at Encode Lab, Westlake University"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://xinwei-niu.vercel.app # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "xinwei-niu/xinwei-niu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Xinwei Niu"
   pronouns         : # example: "she/her"  
-  bio              : "MSc AI Graduate, the University of Edinburgh"
-  location         : "Edinburgh, Scotland"
-  employer         : "University of Edinburgh"
+  bio              : "Research Assistant at Encode Lab"
+  location         : "Hangzhou, China"
+  employer         : "Westlake University"
   uri              : # URL
   email            : "nxw2002@outlook.com" 
 
@@ -81,6 +81,8 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
+  preprints:
+    title: 'Preprints'
   books:
     title: 'Books'
   manuscripts:
@@ -122,7 +124,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # Blog feed is hidden.
   path                   : # blank (default) uses feed.xml
 
 
@@ -163,6 +165,17 @@ include:
   - _pages
   - files
 exclude:
+  # AcademicPages sample publications are not personal publications.
+  - _publications/2009-10-01-paper-title-number-1.md
+  - _publications/2010-10-01-paper-title-number-2.md
+  - _publications/2015-10-01-paper-title-number-3.md
+  - _publications/2024-02-17-paper-title-number-4.md
+  - _publications/2025-06-08-paper-title-number-5.md
+  # Keep blog sources available for editing without publishing them.
+  - _posts
+  - _pages/year-archive.html
+  - _pages/category-archive.html
+  - _pages/tag-archive.html
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -304,7 +317,6 @@ timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
@@ -314,7 +326,6 @@ plugins:
 
 # Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap

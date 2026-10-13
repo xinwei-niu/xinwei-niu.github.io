@@ -1,0 +1,6 @@
+{% if post.abstract %}
+  <details class="publication-abstract">
+    <summary>Abstract</summary>
+    {{ post.abstract | markdownify }}
+  </details>
+{% endif %}
