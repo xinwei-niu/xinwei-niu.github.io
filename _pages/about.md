@@ -31,7 +31,7 @@ My broader interests include autoregressive and semi-autoregressive models, diff
 
 **[SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference]({{ post.url | relative_url }})**
 
-Qitong Wang, **Xinwei Niu**, Mingluo Su, Shanwei Zhao, Shiai Zhu, and Huan Wang.
+Qitong Wang<sup>*</sup>, **Xinwei Niu**<sup>*</sup>, Mingluo Su, Shanwei Zhao, Shiai Zhu, and Huan Wang.
 
 *arXiv preprint*, 2026. [arXiv](https://arxiv.org/abs/2610.12327) · [PDF](https://arxiv.org/pdf/2610.12327)
 

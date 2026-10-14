@@ -9,7 +9,7 @@ venue: arXiv preprint, arXiv:2610.12327
 excerpt: Decoding-aware calibration and an optimized N:M sparse matrix-vector kernel
   improve pruned LLM generation quality and decoding efficiency.
 paperurl: https://arxiv.org/pdf/2610.12327
-citation: 'Qitong Wang, <strong>Xinwei Niu</strong>, Mingluo Su, Shanwei Zhao, Shiai
+citation: 'Qitong Wang<sup>*</sup>, <strong>Xinwei Niu</strong><sup>*</sup>, Mingluo Su, Shanwei Zhao, Shiai
   Zhu, and Huan Wang. (2026). SparseDecoding: Decoding-Aware Pruning for Accurate
   and Efficient LLM Inference. <i>arXiv preprint arXiv:2610.12327</i>.'
 abstract: 'The memory-bound nature of the decoding stage of large language model (LLM)
@@ -46,7 +46,7 @@ abstract: 'The memory-bound nature of the decoding stage of large language model
   wall-clock decoding speedup on A100 GPUs.'
 ---
 
-Qitong Wang, **Xinwei Niu**, Mingluo Su, Shanwei Zhao, Shiai Zhu, and Huan Wang.
+Qitong Wang<sup>*</sup>, **Xinwei Niu**<sup>*</sup>, Mingluo Su, Shanwei Zhao, Shiai Zhu, and Huan Wang.
 
 **arXiv preprint · October 8, 2026**
 
