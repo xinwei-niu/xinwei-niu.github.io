@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "About Me"
 description: "Xinwei Niu — Research Assistant at Encode Lab, Westlake University, researching efficient generative models, sparse attention, and multimodal systems."
 author_profile: true
 redirect_from:
