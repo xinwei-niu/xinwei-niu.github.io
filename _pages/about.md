@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Academic Profile"
+title: ""
 description: "Xinwei Niu — Research Assistant at Encode Lab, Westlake University, researching efficient generative models, sparse attention, and multimodal systems."
 author_profile: true
 redirect_from:
@@ -48,12 +48,16 @@ Qitong Wang<sup>*</sup>, **Xinwei Niu**<sup>*</sup>, Mingluo Su, Shanwei Zhao, S
     <div class="experience-content"><h3><a href="https://westlake.edu.cn/">Westlake University</a></h3><p class="experience-role">Research Assistant · Encode Lab</p><p>Hangzhou, China. Working under the supervision of <a href="https://huanwang.tech/">Huan Wang</a> on efficient generative modelling and large language model inference.</p></div>
   </div>
   <div class="experience-row">
+    <a class="institution-logo" href="https://westlake.edu.cn/"><img src="{{ '/images/institutions/westlake.png' | relative_url }}" alt="Westlake University logo" loading="lazy"></a>
+    <div class="experience-content"><h3><a href="https://westlake.edu.cn/">Westlake University</a></h3><p class="experience-role">Visiting Student · Encode Lab</p><p>Hangzhou, China. Supervised by <a href="https://huanwang.tech/">Huan Wang</a>. Contributed to <a href="{{ '/publication/sparsedecoding/' | relative_url }}">SparseDecoding</a>, investigating decoding-aware pruning and efficient sparse execution for large language models.</p></div>
+  </div>
+  <div class="experience-row">
     <a class="institution-logo" href="https://www.ed.ac.uk/"><img src="{{ '/images/institutions/edinburgh.png' | relative_url }}" alt="University of Edinburgh logo" loading="lazy"></a>
-    <div class="experience-content"><h3><a href="https://www.ed.ac.uk/">University of Edinburgh</a></h3><p class="experience-role">MSc in Artificial Intelligence</p><p>Postgraduate studies in the <a href="https://informatics.ed.ac.uk/">School of Informatics</a>.</p></div>
+    <div class="experience-content"><h3><a href="https://www.ed.ac.uk/">University of Edinburgh</a></h3><p class="experience-role">MSc in Artificial Intelligence</p><p>Postgraduate studies in the <a href="https://informatics.ed.ac.uk/">School of Informatics</a>.</p><p>Dissertation: <em>Multimodal QA System with Mixture of Adapters for Scientific Documents</em>.<br>Supervisor: <a href="https://emilyallaway.github.io/">Dr. Emily Allaway</a>.</p></div>
   </div>
   <div class="experience-row">
     <a class="institution-logo" href="https://www.manchester.ac.uk/"><img src="{{ '/images/institutions/manchester.png' | relative_url }}" alt="University of Manchester logo" loading="lazy"></a>
-    <div class="experience-content"><h3><a href="https://www.manchester.ac.uk/">University of Manchester</a></h3><p class="experience-role">BSc with Honours in Artificial Intelligence</p><p>Undergraduate studies in the <a href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>.</p></div>
+    <div class="experience-content"><h3><a href="https://www.manchester.ac.uk/">University of Manchester</a></h3><p class="experience-role">BSc with Honours in Artificial Intelligence</p><p>Undergraduate studies in the <a href="https://www.cs.manchester.ac.uk/">Department of Computer Science</a>.</p><p>Final-year project: <em>Event Sequence Prediction with Linear-Time Sequencing State Space Model</em>.<br>Supervisor: <a href="https://research.manchester.ac.uk/en/persons/mauricio.alvarezlopez">Dr. Mauricio Álvarez</a>.</p></div>
   </div>
   <div class="experience-row">
     <a class="institution-logo" href="https://research.samsung.com/src-b"><img src="{{ '/images/institutions/samsung.png' | relative_url }}" alt="Samsung Research logo" loading="lazy"></a>
